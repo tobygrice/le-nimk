@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser software</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function play() {
+            document.getElementById('moosic').play();
+        }
+        
+        function nimkCheck(selection) {
+            if (selection.value=="nimk") {
+                document.write("nimk");
+            } else {
+                $("#islenimk").append("Le nimk!<br>")
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-image: url('le_nimk.jpg');
+            background-size: 100% 700px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop id="moosic">
+        <source src="moosic.mp3" type="audio/mpeg">
+    </audio>
+    <div onclick="play()" style="width:100vw; height:100vh;">
+        <h1>Le nimk le club</h1>
+        <p style="max-width: 400px;">Le nimk le nimk le nimk. Le nimk le nimk le nimk le nimk, le nimk le nimk. Le nimk le nimk, le nimk. Le nimk le nimk! Le nimk, le nimk le nimk le nimk le nimk. Le nimk le nimk le nimk. Le nimk le nimk le nimk le nimk, le nimk le nimk. Le nimk le nimk, le nimk.</p>
+        <img src="le_nimk.jpg" style="height:100px;">
+        <img src="le_nimk.jpg" style="height:10%;position:absolute;left:20%;top:10%;z-index:-990;">
+        <img src="le_nimk.jpg" style="height:15%;position:absolute;left:90%;top:30%;"><br><br>
+        Le nimk le nimk?
+        <select onchange="nimkCheck(this);">
+            <option value="le nimk">Le nimk</option>
+            <option value="le nimk">Le nimk</option>
+            <option value="le nimk">Le nimk</option>
+            <option value="nimk">Nimk?</option>
+            <option value="le nimk">Le nimk</option>
+            <option value="le nimk">Le nimk</option>
+        </select>
+        <h2 id="islenimk">Le nimk!<br><h2>
+    </div>
+</body>
+</html>
